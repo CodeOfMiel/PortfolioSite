@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe Photography - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        /* Add these styles */
+        #portfolio {
+            position: relative;
+        }
+        .gallery-item {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .gallery-item.visible {
+            opacity: 1;
+        }
+        .gallery-item img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="breadcrumbs">
+            <a href="index.html">Home</a>
+            <span class="separator">/</span>
+            <span class="current-page">Current Page</span>
+        </div>
+        <nav>
+            <div class="logo">JD</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="portfolio">
+            <h1>Portfolio</h1>
+            <div class="gallery-item"><img src="ASE 4 PHOTOS by Jimiel T/StaredownMainEvent.jpg" alt="Photo 1"></div>
+            <div class="gallery-item"><img src="ASE 4 PHOTOS by Jimiel T/AHandshake.jpg" alt="Photo 2"></div>
+            <div class="gallery-item"><img src="ASE 4 PHOTOS by Jimiel T/Superstar.jpg" alt="Photo 3"></div>
+            <div class="gallery-item"><img src="ASE 4 PHOTOS by Jimiel T/Intensity.jpg" alt="Photo 4"></div>
+            <div class="gallery-item"><img src="ASE 4 PHOTOS by Jimiel T/Lockhart.jpg" alt="Photo 5"></div>
+            <div class="gallery-item"><img src="ASE 4 PHOTOS by Jimiel T/SheltonB.jpg" alt="Photo 6"></div>
+            <div class="gallery-item"><img src="ASE 4 PHOTOS by Jimiel T/Fly.jpg" alt="Photo 7"></div>
+            <div class="gallery-item"><img src="ASE 4 PHOTOS by Jimiel T/Heel.jpg" alt="Photo 8"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2023 John Doe Photography. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, {
+                threshold: 0.2 // Trigger when 20% of the item is visible
+            });
+
+            galleryItems.forEach(item => observer.observe(item));
+        });
+    </script>
+</body>
+</html>
