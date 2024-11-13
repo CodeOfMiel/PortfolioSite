@@ -124,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update breadcrumbs
     updateBreadcrumbs();
+    
 
     // More existing code...
 });
