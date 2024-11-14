@@ -21,7 +21,8 @@ body {
 
 header {
     background-color: var(--dark-grey);
-    padding: 1rem 0;
+    padding: 10px 20px;
+    height: auto;
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -29,8 +30,8 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -43,7 +44,9 @@ nav {
 }
 
 nav ul {
+    margin: 0;
     display: flex;
+    align-items: center;
     list-style: none;
 }
 
@@ -145,6 +148,7 @@ h1, h2 {
     display: flex;
     align-items: center;
     gap: 2rem;
+    padding-top: 3rem;
 }
 #about h1 {
     text-align: center;
@@ -338,4 +342,15 @@ footer {
     opacity: 1;
     filter: blur(0);
     transform: scale(1);
+}
+
+.logo img {
+    height: 75px;
+    width: auto;
+    vertical-align: middle;
+}
+
+#portfolio h1 {
+    padding-top: 3rem;
+    text-align: center; 
 }
