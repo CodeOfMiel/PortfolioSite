@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('nav ul');
-    
+
     menuToggle.addEventListener('click', () => {
         navMenu.classList.toggle('show');
     });
@@ -124,7 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update breadcrumbs
     updateBreadcrumbs();
-    
 
-    // More existing code...
+
 });

@@ -37,11 +37,6 @@ nav {
     padding: 0 2rem;
 }
 
-.logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--orange);
-}
 
 nav ul {
     margin: 0;
@@ -74,13 +69,50 @@ section {
     margin: 0 auto;
 }
 
-h1, h2 {
+h1,
+h2 {
     margin-bottom: 1rem;
 }
 
 #home {
+    position: relative;
     text-align: center;
     padding: 8rem 2rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.15;
+    }
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('ASE 4 PHOTOS by Jimiel T/HeelDarius.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: -1;
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+#home h1,
+#home h2,
+#home .cta-button {
+    position: relative;
+    z-index: 1;
 }
 
 #home h1 {
@@ -94,7 +126,8 @@ h1, h2 {
     margin-bottom: 2rem;
 }
 
-.cta-button, .view-more {
+.cta-button,
+.view-more {
     display: inline-block;
     background-color: var(--orange);
     color: var(--white);
@@ -104,7 +137,8 @@ h1, h2 {
     transition: background-color 0.3s ease;
 }
 
-.cta-button:hover, .view-more:hover {
+.cta-button:hover,
+.view-more:hover {
     background-color: #FF8C5A;
 }
 
@@ -150,6 +184,7 @@ h1, h2 {
     gap: 2rem;
     padding-top: 3rem;
 }
+
 #about h1 {
     text-align: center;
 }
@@ -175,7 +210,8 @@ form {
     margin: 0 auto;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 0.8rem;
     background-color: var(--light-grey);
@@ -352,5 +388,28 @@ footer {
 
 #portfolio h1 {
     padding-top: 3rem;
-    text-align: center; 
+    text-align: center;
+}
+
+#portfolio {
+    position: relative;
+}
+
+.gallery-item {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.gallery-item.visible {
+    opacity: 1;
+}
+
+.gallery-item img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
 }
