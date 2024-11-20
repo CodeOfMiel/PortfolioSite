@@ -84,18 +84,14 @@ function openLightbox(imageSrc) {
 
 function handleFormSubmit(e) {
     e.preventDefault();
-    const formData = new FormData(e.target);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
-
-    // Here you would typically send the form data to a server
-    // For this example, we'll just log it to the console
-    console.log('Form submitted:', { name, email, message });
-
-    // Show a success message
-    alert('Thank you for your message! We\'ll get back to you soon.');
-    e.target.reset();
+    
+    // Update the form's action attribute to use FormSubmit
+    const form = e.target;
+    form.action = "https://formsubmit.co/jimieltomlin@gmail.com";
+    form.method = "POST";
+    
+    // Submit the form
+    form.submit();
 }
 
 function updateBreadcrumbs() {
