@@ -87,7 +87,7 @@ function handleFormSubmit(e) {
     
     // Update the form's action attribute to use FormSubmit
     const form = e.target;
-    form.action = "https://formsubmit.co/jimieltomlin@gmail.com";
+    form.action = "https://formsubmit.co/21f9b84304e32d93eacb75460ae71287";
     form.method = "POST";
     
     // Submit the form
