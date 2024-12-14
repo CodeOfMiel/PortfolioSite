@@ -464,3 +464,123 @@ footer {
     object-fit: cover;
     max-width: 100%;
 }
+
+/* Resume Page Enhancements */
+#resume {
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: var(--dark-grey);
+    color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+#resume h1 {
+    font-family: var(--heading-font);
+    font-size: 3.5rem;
+    color: var(--orange);
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    position: relative; /* Needed for pseudo-element positioning */
+}
+
+#resume h1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Position the underline below the text */
+    transform: translateX(-50%);
+    width: 50%; /* Adjust width as desired */
+    height: 3px; /* Thickness of the underline */
+    background-color: var(--orange);
+}
+
+
+
+#resume h1, #resume h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: var(--heading-font);
+    color: var(--orange);
+    letter-spacing: 1px;
+}
+
+#resume h2 {
+    font-size: 2rem;
+}
+
+#resume p, #resume ul {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+#resume ul {
+    list-style: disc;
+    margin-left: 2rem;
+}
+
+#resume ul li {
+    margin-bottom: 0.5rem;
+}
+
+#resume section {
+    padding: 2rem;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+#resume section:last-child {
+    border-bottom: none;
+}
+
+#resume .icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: var(--orange);
+}
+
+#resume h2 .icon {
+    vertical-align: middle;
+}
+/* LinkedIn Link Styling */
+.linkedin-link {
+    display: inline-flex; /* Use flexbox for proper alignment */
+    align-items: center; /* Center icon and text vertically */
+    justify-content: center; /* Center content horizontally */
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    color: var(--orange);
+    text-decoration: none;
+    border: 2px solid var(--orange);
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-top: 1rem; /* Add space between heading and button */
+}
+
+.linkedin-link i {
+    margin-right: 0.5rem; /* Add spacing between icon and text */
+    font-size: 1.5rem; /* Ensure the icon is proportional to text */
+}
+
+.linkedin-link:hover {
+    background-color: var(--orange);
+    color: var(--black);
+    box-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+}
+
+/* Ensure the button is perfectly centered */
+.linkedin-link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0; /* Add spacing above and below the button */
+    padding: 1rem; /* Optional: Add padding inside the container */
+}
+
+
+
+#contact{
+    text-align: center;
+}
